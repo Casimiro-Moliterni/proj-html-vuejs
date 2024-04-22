@@ -6,10 +6,13 @@ export default{
 
 <template>
 <footer>
-    ciao sono il footer
+
 </footer>
 </template>
 
 <style scoped lang="scss">
+@use '../style/partials/_variables' as *;
 
+
+  
 </style>

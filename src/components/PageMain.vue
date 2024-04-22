@@ -5,11 +5,13 @@ export default{
 </script>
 
 <template>
-<footer>
-    ciao sono il main
-</footer>
+ <main>
+
+ </main>
 </template>
 
 <style scoped lang="scss">
+@use '../style/partials/_variables' as *;
+
 
 </style>
