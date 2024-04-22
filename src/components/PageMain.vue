@@ -1,12 +1,16 @@
 <script>
+import hero from './hero.vue';
 export default{
-    name:'PageMain'
+    name:'PageMain',
+    components:{
+        hero
+    }
 }
 </script>
 
 <template>
  <main>
-
+<hero></hero>
  </main>
 </template>
 
