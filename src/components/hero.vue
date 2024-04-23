@@ -14,6 +14,7 @@ export default{
         </p>
         <button class="btn">Read More</button>
    </div>
+   <button class="chevron-btn"><i class="fa-solid fa-chevron-up"></i></button>
 </section>
 </template>
 
@@ -21,6 +22,7 @@ export default{
 @use '../style/partials/_variables' as *;
 
 .hero{
+    position: relative;
     display: flex;
     align-items: center;
     background-image:url(../assets/img/slider-1536x520.jpg);
@@ -28,13 +30,20 @@ export default{
     background-size: cover;
     min-height: 700px;
     text-align: center;
+    .chevron-btn{
+     padding: 15px 15px;
+     position: absolute;
+     bottom: 70px;
+     right: 60px;
+      i{color: black;}
+    }
   .container{
     width: 20%;
     .text-title{
     padding-top: 15px;
     padding-bottom: 20px;
     font-size: 45px;
-    font-weight: 500;
+    font-weight: 400;
     .color-p{
         color: $brand_primary;
     }
@@ -43,7 +52,7 @@ export default{
         line-height: 1.5;
     }
     .btn{
-        padding-top: 20px;
+        margin-top: 20px;
         border-radius: 20px;
         padding: 12px 20px;
         font-size: 14px;
