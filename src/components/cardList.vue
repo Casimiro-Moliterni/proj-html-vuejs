@@ -1,6 +1,10 @@
 <script>
+import singleCard from './singleCard.vue';
 export default {
-    name: 'cardList'
+    name: 'cardList',
+    components:{
+        singleCard
+    }
 }
 </script>
 <template>
@@ -19,9 +23,9 @@ export default {
             </div>
             <!-- fine ///////////////////////////////// -->
             <div class="card-list">
-                <div class="container">
-                    
-                </div>
+                   <singleCard></singleCard>
+                   <singleCard></singleCard>
+                   <singleCard></singleCard>
             </div>
         </div>
     </section>
@@ -35,6 +39,7 @@ section {
     min-height: 600px;
     .container{
         padding-top: 80px;
+        padding-bottom:90px ;
        .text-new-movie-wrapper{
         display: flex;
         align-items: center;
@@ -62,6 +67,11 @@ section {
             }
         }
        }
+
+       .card-list{
+        display: flex;
+       }
     }
 }
+
 </style>
