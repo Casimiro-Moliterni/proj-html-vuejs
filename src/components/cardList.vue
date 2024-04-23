@@ -113,7 +113,13 @@ export default {
                 <li ><a href="#"> TV Series</a></li>
             </ul>
             <div class="wrap-card-movie">
-              <CardMovie ></CardMovie>
+              <CardMovie></CardMovie>
+            </div>
+            <div class="text-new-movie-wrapper">
+                <div class="text">
+                    <h3>New Movie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -131,7 +137,7 @@ export default {
         .text-new-movie-wrapper {
             display: flex;
             align-items: center;
-            margin-bottom: 70px;
+           padding-bottom: 70px;
 
             .text {
                 border-left: 3px solid $brand_primary;

@@ -77,7 +77,7 @@ export const store = reactive({
         },
        
     ],
-    blogList:[
+    BlogList:[
         
         {
             id:'01',
