@@ -17,9 +17,9 @@ export const store = reactive({
             imageSmall:'2-1-100x100.jpg',
             imageMedium:'2-1-300x300.jpg',
             imageXL:'2.jpg',
-            name:'New Movie Quisque in Strack',
+            name:'Quisque in Strack New Movie',
             category:'Coming Soon',
-            views:'503'
+            views:'947'
         },
         {
             id:'03',

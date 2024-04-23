@@ -45,6 +45,7 @@ export default {
 @use '../style/partials/_variables' as *;
 
 section {
+    color: white;
     background-color: $brand_secondary ;
     min-height: 600px;
     .container{
