@@ -167,6 +167,7 @@ export default {
             z-index: 33;
             color: #2D2E2F;
             &.active{color: white;}
+            font-weight: 700;
             &.left {
                 left: 0;
                 border-top-right-radius: 20px;

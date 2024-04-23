@@ -22,6 +22,7 @@ export default{
 @use '../style/partials/_variables' as *;
 
 .hero{
+    color: white;
     position: relative;
     display: flex;
     align-items: center;
