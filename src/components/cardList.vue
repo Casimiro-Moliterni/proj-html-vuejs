@@ -54,9 +54,28 @@ export default {
                 </div>
                 <!-- fine row left ///////////  -->
                 <div class="row-right">
+                    <!-- title  -->
                     <div class="title">
                         <h3>New Movie</h3>
                         <div>Plying 24</div>
+                    </div>
+                    <!-- container card  -->
+                    <div class="wrapper-card">
+                        <div class="card" v-for="card in store.MovieList" >
+                            <!-- img  -->
+                           <div class="image">
+                            <img :src="getImageUrl(card.imageSmall)" alt="">
+                           </div>
+                           <div class="text">
+                               <h3>{{ card.name }}</h3>
+                               <div class="views"><strong>Views:{{ card.views }}</strong></div>
+                               <div class="clock">
+                                  February 12,2016
+                                 <div>2.30.00</div>
+                               </div>
+                           </div>
+                        </div>
+                        <!-- //////  -->
                     </div>
                 </div>
             </div>
@@ -123,7 +142,9 @@ section {
 
         .wrapper-youtube {
             display: flex;
-           color: white;
+            color: white;
+            height: 550px;
+            overflow: hidden;
             .row-left {
                 width: 65%;
                 margin-right: 30px;
@@ -132,11 +153,43 @@ section {
             .row-right{
                 width: 35%;
                 height: 100%;
+                display: flex;
+                flex-direction: column;
                 background-color: #182028;
-                padding-top:14px ;
-                padding-left: 12px;
-
-                .title{h3{padding-bottom: 10px;}padding-bottom: 10px;}
+                .title{
+                    h3{padding-bottom: 10px;padding-top:14px ;}
+                    padding-bottom: 20px;
+                    padding-left: 15px;
+                    border-bottom: 4px solid $brand_secondary;}
+                .wrapper-card{
+                    display: flex;
+                    flex-direction: column;
+                     overflow: auto;
+                    .card{
+                        height: 100px;
+                        padding: 20px 15px;
+                        display: flex;
+                        gap: 15px;
+                        margin-bottom: 22px;
+                        .image{
+                            height: 100px;
+                            width: 100px;
+                            img{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        .text{
+                            flex-grow: 1;
+                         .views{padding: 10px 0;}
+                        .clock{
+                         display: flex;
+                         justify-content: space-between;
+                        }
+                        }
+                    }
+                }
             }
         }
     }
