@@ -12,7 +12,7 @@ export default{
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi fuga quisquam nam mollitia consectetur at! Eaque voluptate ipsam, adipisci harum explicabo tenetur.
         </p>
-        <button>Read More</button>
+        <button class="btn">Read More</button>
    </div>
 </section>
 </template>
@@ -41,6 +41,15 @@ export default{
    }
    p{
         line-height: 1.5;
+    }
+    .btn{
+        padding-top: 20px;
+        border-radius: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-family: inherit;
+        border: none;
+        background-color: $brand_primary;
     }
   }
 }
