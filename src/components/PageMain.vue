@@ -1,9 +1,11 @@
 <script>
 import hero from './hero.vue';
+import cardList from'./cardList.vue';
 export default{
     name:'PageMain',
     components:{
-        hero
+        hero,
+       cardList
     }
 }
 </script>
@@ -11,6 +13,7 @@ export default{
 <template>
  <main>
 <hero></hero>
+<cardList></cardList>
  </main>
 </template>
 

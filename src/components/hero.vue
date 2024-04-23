@@ -7,7 +7,7 @@ export default{
 <template>
 <section class="hero">
     <div class="container">
-        <h4>Welcome To Our Movie Site </h4>
+        <div>Welcome To Our Movie Site </div>
         <span class="text-title">OUR SPECIAL <span class="color-p">MOVIE</span></span>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi fuga quisquam nam mollitia consectetur at! Eaque voluptate ipsam, adipisci harum explicabo tenetur.

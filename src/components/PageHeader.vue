@@ -235,6 +235,7 @@ border-bottom:1px solid #182028;
       }
 
       div {
+        cursor: pointer;
         display: flex;
         background-color: $brand_primary;
         height: 100%;
@@ -259,6 +260,7 @@ padding: 14px 0px 26px 0;
         display: flex;
         flex-grow:1 ;
         gap: 20px;
+        i{cursor: pointer;}
         a{
           color: white;
           font-size: 24px;
