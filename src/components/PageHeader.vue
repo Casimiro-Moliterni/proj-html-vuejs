@@ -259,7 +259,7 @@ padding: 14px 0px 26px 0;
       ul{
         display: flex;
         flex-grow:1 ;
-        gap: 20px;
+        gap: 25px;
         i{cursor: pointer;}
         a{
           color: white;

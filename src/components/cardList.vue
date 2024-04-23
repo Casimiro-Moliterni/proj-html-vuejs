@@ -43,6 +43,23 @@ export default {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
             </div>
+            <div class="wrapper-youtube">
+                <div class="row-left">
+                    <iframe width="100%" height="550px" 
+                        src="https://www.youtube.com/embed/BP0k4SdquG0?si=hml7-23xvhH1U0jg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- fine row left ///////////  -->
+                <div class="row-right">
+                    <div class="title">
+                        <h3>New Movie</h3>
+                        <div>Plying 24</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -69,6 +86,10 @@ section {
                 padding: 0 0 12px 12px;
                 border-bottom: 1px solid #182028;
                 flex-grow: 1;
+
+                h3 {
+                    padding-bottom: 12px;
+                }
             }
 
             .btn-wrapper {
@@ -98,6 +119,25 @@ section {
             flex-wrap: wrap;
             align-items: center;
             padding-bottom: 90px;
+        }
+
+        .wrapper-youtube {
+            display: flex;
+           color: white;
+            .row-left {
+                width: 65%;
+                margin-right: 30px;
+                background-color: black;
+            }
+            .row-right{
+                width: 35%;
+                height: 100%;
+                background-color: #182028;
+                padding-top:14px ;
+                padding-left: 12px;
+
+                .title{h3{padding-bottom: 10px;}padding-bottom: 10px;}
+            }
         }
     }
 }

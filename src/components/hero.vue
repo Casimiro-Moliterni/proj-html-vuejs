@@ -40,6 +40,7 @@ export default{
     }
   .container{
     width: 20%;
+    margin:0px 33% 0 auto;
     .text-title{
     padding-top: 15px;
     padding-bottom: 20px;
