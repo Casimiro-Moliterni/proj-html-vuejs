@@ -20,7 +20,7 @@ export default {
 }
 </script>
 <template>
-    <section>
+    <section id="card-list">
         <!-- parte inziale con testo e bottoni x carosello  -->
         <div class="container">
             <div class="text-new-movie-wrapper">
@@ -45,9 +45,9 @@ export default {
             </div>
             <div class="wrapper-youtube">
                 <div class="row-left">
-                    <iframe width="100%" height="550px" 
-                        src="https://www.youtube.com/embed/BP0k4SdquG0?si=hml7-23xvhH1U0jg"
-                        title="YouTube video player" frameborder="0"
+                    <iframe width="100%" height="550px"
+                        src="https://www.youtube.com/embed/BP0k4SdquG0?si=hml7-23xvhH1U0jg" title="YouTube video player"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
@@ -61,22 +61,36 @@ export default {
                     </div>
                     <!-- container card  -->
                     <div class="wrapper-card">
-                        <div class="card" v-for="card in store.MovieList" >
+                        <div class="card" v-for="card in store.MovieList">
                             <!-- img  -->
-                           <div class="image">
-                            <img :src="getImageUrl(card.imageSmall)" alt="">
-                           </div>
-                           <div class="text">
-                               <h3>{{ card.name }}</h3>
-                               <div class="views"><strong>Views:{{ card.views }}</strong></div>
-                               <div class="clock">
-                                  February 12,2016
-                                 <div>2.30.00</div>
-                               </div>
-                           </div>
+                            <div class="image">
+                                <img :src="getImageUrl(card.imageSmall)" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>{{ card.name }}</h3>
+                                <div class="views"><strong>Views:{{ card.views }}</strong></div>
+                                <div class="clock">
+                                    February 12,2016
+                                    <div>2.30.00</div>
+                                </div>
+                            </div>
                         </div>
                         <!-- //////  -->
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="hero-second">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="title">
+                <h3>COOMING SOON MOOVIE</h3>
+                <h1>MAX STILL </h1>
+
+                <div class="title-bottom">
+                    <span>JON PLAYER <span class="color-brand">&</span> EMILY ROSE</span>
+                    <div>THE COUNTDOWN IS FINISHED!</div>
                 </div>
             </div>
         </div>
@@ -86,7 +100,7 @@ export default {
 <style scoped lang="scss">
 @use '../style/partials/_variables' as *;
 
-section {
+#card-list {
     color: white;
     background-color: $brand_secondary ;
     min-height: 600px;
@@ -145,51 +159,127 @@ section {
             color: white;
             height: 550px;
             overflow: hidden;
+
             .row-left {
                 width: 65%;
                 margin-right: 30px;
                 background-color: black;
             }
-            .row-right{
+
+            .row-right {
                 width: 35%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 background-color: #182028;
-                .title{
-                    h3{padding-bottom: 10px;padding-top:14px ;}
+
+                .title {
+                    h3 {
+                        padding-bottom: 10px;
+                        padding-top: 14px;
+                    }
+
                     padding-bottom: 20px;
                     padding-left: 15px;
-                    border-bottom: 4px solid $brand_secondary;}
-                .wrapper-card{
+                    border-bottom: 4px solid $brand_secondary;
+                }
+
+                .wrapper-card {
                     display: flex;
                     flex-direction: column;
-                     overflow: auto;
-                    .card{
+                    overflow: auto;
+
+                    .card {
                         height: 100px;
                         padding: 20px 15px;
                         display: flex;
                         gap: 15px;
                         margin-bottom: 22px;
-                        .image{
+
+                        .image {
                             height: 100px;
                             width: 100px;
-                            img{
+
+                            img {
                                 object-fit: cover;
                                 height: 100%;
                                 width: 100%;
                             }
                         }
-                        .text{
+
+                        .text {
                             flex-grow: 1;
-                         .views{padding: 10px 0;}
-                        .clock{
-                         display: flex;
-                         justify-content: space-between;
-                        }
+
+                            .views {
+                                padding: 10px 0;
+                            }
+
+                            .clock {
+                                display: flex;
+                                justify-content: space-between;
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+#hero-second {
+    background-image: url(../assets/img/coming-bg.jpg);
+    min-height: 760px;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(9, 8, 32, 0.3);
+        z-index: 2;
+    }
+    .container {
+        width: fit-content;
+        margin: 0px 31% 0 auto;
+
+        .title {
+            position: relative;
+            z-index: 11;
+            padding: 0 5px;
+            h3,.color-brand {
+                color: $brand_primary;
+            }
+            h3{
+                font-size: 22px;
+                padding-bottom: 7px;
+            }
+            h1{
+                font-size: 70px;
+                font-weight: 300;
+                padding-bottom: 7px;
+                margin: 0 18px;
+            }
+            .title-bottom  {
+                    background-color: #0f1828;
+                    padding:10px 0;
+                    span{
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+                    div{
+                        font-size: 18px;
+                        margin-top: 20px;
+                    }
             }
         }
     }

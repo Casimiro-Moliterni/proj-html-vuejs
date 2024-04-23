@@ -54,6 +54,7 @@ export default{
         line-height: 1.5;
     }
     .btn{
+        color: white;
         margin-top: 20px;
         border-radius: 20px;
         padding: 12px 20px;

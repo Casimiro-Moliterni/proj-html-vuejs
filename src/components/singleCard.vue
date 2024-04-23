@@ -95,6 +95,7 @@ export default {
     position: relative;
     border: none;
     color: white;
+    width: calc(100% / 3);
     &.active {
         height: 580px;
         opacity: 1;
@@ -106,6 +107,7 @@ export default {
     .image {
         position: relative;
         height: 100%;
+        width: 100%;
         border: none;
         .overlay {
         border-radius: 20px;
@@ -121,8 +123,10 @@ export default {
         &.active{z-index: 0;}
     }
         img {
+            width: 100%;
             height: 100%;
             border-radius: 20px;
+            object-fit: cover;
         }
 
         .wrap-star {
