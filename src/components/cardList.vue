@@ -1,10 +1,22 @@
 <script>
 import singleCard from './singleCard.vue';
+import { store} from '../store.js';
 export default {
     name: 'cardList',
     components:{
         singleCard
-    }
+    },
+    data(){
+        return{
+            store,
+            activeItem:0,
+        }
+    },
+    methods:{
+    getImageUrl(name) {
+      return new URL(`../assets/img/${name}`, import.meta.url).href;
+    },
+  }
 }
 </script>
 <template>
@@ -23,9 +35,7 @@ export default {
             </div>
             <!-- fine ///////////////////////////////// -->
             <div class="card-list">
-                   <singleCard></singleCard>
-                   <singleCard></singleCard>
-                   <singleCard></singleCard>
+                  <single-card></single-card>
             </div>
         </div>
     </section>
@@ -70,6 +80,8 @@ section {
 
        .card-list{
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
        }
     }
 }
