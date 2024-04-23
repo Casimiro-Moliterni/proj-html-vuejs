@@ -1,15 +1,16 @@
 <script>
 import singleCard from './singleCard.vue';
+import CardMovie from './CardMovie.vue';
 import { store } from '../store.js';
 export default {
     name: 'cardList',
     components: {
-        singleCard
+        singleCard,
+        CardMovie,
     },
     data() {
         return {
-            store,
-            activeItem: 0,
+            store
         }
     },
     methods: {
@@ -22,7 +23,7 @@ export default {
 <template>
     <section id="card-list">
         <!-- parte inziale con testo e bottoni x carosello  -->
-        <div class="container">
+        <div class="container p-b-90">
             <div class="text-new-movie-wrapper">
                 <div class="text">
                     <h3>New Movie</h3>
@@ -95,6 +96,27 @@ export default {
             </div>
         </div>
     </section>
+    <section id="card-list">
+        <div class="container">
+            <div class="text-new-movie-wrapper">
+                <div class="text">
+                    <h3>New Movie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+            </div>
+            <!-- ul ///////////////  -->
+            <ul class="ul-movie">
+                <li ><a href="#" class="active"> All</a></li>
+                <li ><a href="#"> Coming Soon</a></li>
+                <li ><a href="#">Latest Movie</a></li>
+                <li ><a href="#">Top Rating</a></li>
+                <li ><a href="#"> TV Series</a></li>
+            </ul>
+            <div class="wrap-card-movie">
+              <CardMovie ></CardMovie>
+            </div>
+        </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
@@ -103,12 +125,9 @@ export default {
 #card-list {
     color: white;
     background-color: $brand_secondary ;
-    min-height: 600px;
-
     .container {
         padding-top: 80px;
-        padding-bottom: 90px;
-
+        &.p-b-90{padding-bottom: 90px;}
         .text-new-movie-wrapper {
             display: flex;
             align-items: center;
@@ -159,7 +178,6 @@ export default {
             color: white;
             height: 550px;
             overflow: hidden;
-
             .row-left {
                 width: 65%;
                 margin-right: 30px;
@@ -188,7 +206,7 @@ export default {
                     display: flex;
                     flex-direction: column;
                     overflow: auto;
-
+                  
                     .card {
                         height: 100px;
                         padding: 20px 15px;
@@ -237,6 +255,8 @@ export default {
     position: relative;
     display: flex;
     align-items: center;
+    padding-bottom: 80px;
+
     .overlay {
         position: absolute;
         width: 100%;
@@ -248,6 +268,7 @@ export default {
         background-color: rgba(9, 8, 32, 0.3);
         z-index: 2;
     }
+
     .container {
         width: fit-content;
         margin: 0px 31% 0 auto;
@@ -256,31 +277,60 @@ export default {
             position: relative;
             z-index: 11;
             padding: 0 5px;
-            h3,.color-brand {
+
+            h3,
+            .color-brand {
                 color: $brand_primary;
             }
-            h3{
+
+            h3 {
                 font-size: 22px;
                 padding-bottom: 7px;
             }
-            h1{
+
+            h1 {
                 font-size: 70px;
                 font-weight: 300;
                 padding-bottom: 7px;
                 margin: 0 18px;
             }
-            .title-bottom  {
-                    background-color: #0f1828;
-                    padding:10px 0;
-                    span{
-                        font-size: 22px;
-                        font-weight: 500;
-                    }
-                    div{
-                        font-size: 18px;
-                        margin-top: 20px;
-                    }
+
+            .title-bottom {
+                background-color: #0f1828;
+                padding: 10px 0;
+
+                span {
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+
+                div {
+                    font-size: 18px;
+                    margin-top: 20px;
+                }
             }
+        }
+    }
+}
+#card-list{
+    .ul-movie{
+        display: flex;
+        padding-bottom:65px ;
+        gap: 30px;
+        color: white;
+        .active{
+            color: $brand_primary;
+        }
+        a{
+            color: white;
+        }
+    }
+    .wrap-card-movie{
+        display: flex;
+        flex-wrap: wrap;
+        .card{
+            width: calc((100% / 3) - 20px);
+            margin: 10px;
         }
     }
 }

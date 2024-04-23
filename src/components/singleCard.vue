@@ -8,9 +8,7 @@ export default {
             store,
         }
     },
-    props: {
-        cardInfo: Object
-    },
+
     methods: {
         getImageUrl(name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href;

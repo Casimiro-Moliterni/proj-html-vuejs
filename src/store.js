@@ -52,7 +52,7 @@ export const store = reactive({
             id:'06',
             imageSmall:'5-100x100 (1).jpg',
             imageMedium:'5-300x300.jpg',
-            imageXL:'5 (1).jpg',
+            imageXL:'5-1.jpg',
             name:'Animate Blue Strack New Movie',
             category:'Latest Movie',
             views:'343'
@@ -70,56 +70,12 @@ export const store = reactive({
             id:'08',
             imageSmall:'3-222x300.jpg',
             imageMedium:'3-222x300.jpg',
-            imageXL:'3 (1).jpg',
+            imageXL:'clown.jpg',
             name:'New Movie Quisque in Strack',
             category:'Top Rating',
             views:'339'
         },
-        {
-            id:'09',
-            imageSmall:'blog-100x100.jpg',
-            imageMedium:'blog-300x300.jpg',
-            imageXL:'blog-570x570.jpg',
-            name:'Actor The Concept Movie High Concept Theory See The Post',
-            category:'Latest Movie',
-           
-        },
-        {
-            id:'10',
-            imageSmall:'blog2-100x100.jpg',
-            imageMedium:'blog2-300x300.jpg',
-            imageXL:'img/blog2.jpg',
-            name:'Consequat Nam Lectus Nibh Aucibus it Has Turpis ',
-            category:'Latest Movie',
-           
-        },
-        {
-            id:'11',
-            imageSmall:'blog3-150x150.jpg',
-            imageMedium:'blog3-300x300.jpg',
-            imageXL:'img/blog3-570x570.jpg',
-            name:'Nam Lectus Nibh Consequat Aucibus Turpis It Has',
-            category:'Latest Movie',
-           
-        },
-        {
-            id:'12',
-            imageSmall:'blog4-150x150.jpg',
-            imageMedium:'blog4-300x300.jpg',
-            imageXL:'blog4-570x570.jpg',
-            name:'Bring Me The Head of Alfredo Garcia Best Movie in',
-            category:'Latest Movie',
-           
-        },
-        {
-            id:'13',
-            imageSmall:'blog5-150x150.jpg',
-            imageMedium:'blog5-300x300.jpg',
-            imageXL:'blog5-570x570.jpg',
-            name:'Pump Action Interaction English Action Movie(2020)',
-            category:'Latest Movie',
-
-        }
+       
     ],
     blogList:[
         
