@@ -153,7 +153,7 @@ section {
                         position: absolute;
                         bottom: 17%;
                         left: 0;
-
+                        z-index: 11;
                         :nth-child(2) {
                             font-size: 18px;
                         }

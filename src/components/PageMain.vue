@@ -59,9 +59,13 @@ export default {
                 padding: 18px 16px;
                 border-radius: 25px;
                 width: 33%;
+                font-size: 18px;
+                color: $brand_secondary;
+                font-weight: 500;
             }
             ::placeholder { 
-                   color: white;
+                   color: #8ad98a;
+                   font-size: 16px;
                     }
                   
            }
