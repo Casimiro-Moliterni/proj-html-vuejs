@@ -79,6 +79,12 @@ export default {
             font-family: inherit;
             border: none;
             background-color: $brand_primary;
+            font-weight: 500;
+            transition: 0.5s;
+            &:hover{
+                            background-color: white;
+                            color: black;
+                        }
         }
     }
 }
