@@ -40,13 +40,19 @@ export default {
                                 </li>
                             </ul>
                          </template>
-                         <!-- <template v-if="link.name == 'Recent Post'">
-                            <div class="card" v-for="singleCard in store.BlogList">
+                         <template v-if="link.name == 'Recent Post'">
+                            <div class="card" v-for="singleCard in store.BlogList" v-show="singleCard.id !== '04'&&singleCard.id !== '05' ">
+                              <div class="wrapper-card">
                                 <div class="image">
-                                    <img :src="getImageUrl()" alt="">
+                                    <img :src="getImageUrl(singleCard.imageSmall)" alt="">
+                                    <div>
+                                        <div class="title">{{ singleCard.name }}</div>
+                                        <div>April 14, 2020</div>
+                                    </div>
                                 </div>
+                              </div>
                             </div>
-                         </template> -->
+                         </template>
                         </ul>
                     </div>
                  </div>
@@ -105,6 +111,26 @@ export default {
             ul{
                 display: flex;
                 flex-direction: column;
+                .card{
+                    margin-bottom: 30px;
+                      .wrapper-card{
+                        display: flex;
+                        align-items: center;
+                        .image{
+                       display: flex;
+                       align-items: center;
+                       .title{   
+                                margin-bottom: 10px;
+                            }
+                        img{
+                            height: 80px;
+                            width: 80px;
+                            object-fit: cover;
+                            margin-right: 15px;
+                        }
+                      }
+                    }
+                }
                 #social{
                     width: 85%;
                     display: flex;
