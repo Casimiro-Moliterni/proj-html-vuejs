@@ -26,7 +26,7 @@ export default {
                         <!-- testo  -->
                         <!-- text wrap  -->
                         <div class="text-wrap">
-                            <h3>{{ store.BlogList[0].name }}</h3>
+                            <h3 class="left">{{ store.BlogList[0].name }}</h3>
                         </div>
                         <div class="details left">details</div>
                          <div class="details right">
@@ -149,11 +149,11 @@ section {
                         }
 
                         .text-wrap {
-                            padding: 0 10px;
+                            padding: 0 20px;
                             position: absolute;
                             bottom: 17%;
                             left: 0;
-
+            
                             :nth-child(2) {
                                 font-size: 18px;
                             }
@@ -164,7 +164,7 @@ section {
 
                             h3 {
                                 padding-bottom: 20px;
-                                font-size: 22px;
+                                font-size: 16px;
                                 font-weight: 700;
                             }
                         }
@@ -187,6 +187,10 @@ section {
                                 right: 0;
                                 border-top-left-radius: 20px;
                                 border-bottom-left-radius: 20px;
+                                span{
+                                    margin-left: 7px;
+                                    padding-right: 10px;
+                                }
                             }
                         }
                     }
@@ -194,9 +198,10 @@ section {
                 .card.left{
                 width: 100%;
                 .text-wrap{
-                   h3{
-                    font-size: 24px;
-                   }
+                    bottom: 12%;
+                    .left{
+                        font-size: 20px;
+                    }
                 }
             }
             }
