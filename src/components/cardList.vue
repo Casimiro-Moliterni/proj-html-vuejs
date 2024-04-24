@@ -88,7 +88,6 @@ export default {
             <div class="title">
                 <h3>COOMING SOON MOOVIE</h3>
                 <h1>MAX STILL </h1>
-
                 <div class="title-bottom">
                     <span>JON PLAYER <span class="color-brand">&</span> EMILY ROSE</span>
                     <div>THE COUNTDOWN IS FINISHED!</div>
@@ -106,14 +105,14 @@ export default {
             </div>
             <!-- ul ///////////////  -->
             <ul class="ul-movie">
-                <li ><a href="#" class="active"> All</a></li>
-                <li ><a href="#"> Coming Soon</a></li>
-                <li ><a href="#">Latest Movie</a></li>
-                <li ><a href="#">Top Rating</a></li>
-                <li ><a href="#"> TV Series</a></li>
+                <li><a href="#" class="active"> All</a></li>
+                <li><a href="#"> Coming Soon</a></li>
+                <li><a href="#">Latest Movie</a></li>
+                <li><a href="#">Top Rating</a></li>
+                <li><a href="#"> TV Series</a></li>
             </ul>
             <div class="wrap-card-movie">
-              <CardMovie></CardMovie>
+                <CardMovie></CardMovie>
             </div>
             <div class="text-new-movie-wrapper">
                 <div class="text">
@@ -131,13 +130,18 @@ export default {
 #card-list {
     color: white;
     background-color: $brand_secondary ;
+
     .container {
         padding-top: 80px;
-        &.p-b-90{padding-bottom: 90px;}
+
+        &.p-b-90 {
+            padding-bottom: 90px;
+        }
+
         .text-new-movie-wrapper {
             display: flex;
             align-items: center;
-           padding-bottom: 70px;
+            padding-bottom: 70px;
 
             .text {
                 border-left: 3px solid $brand_primary;
@@ -147,6 +151,7 @@ export default {
 
                 h3 {
                     padding-bottom: 12px;
+                    font-size: 24px;
                 }
             }
 
@@ -184,6 +189,7 @@ export default {
             color: white;
             height: 550px;
             overflow: hidden;
+
             .row-left {
                 width: 65%;
                 margin-right: 30px;
@@ -212,7 +218,7 @@ export default {
                     display: flex;
                     flex-direction: column;
                     overflow: auto;
-                  
+
                     .card {
                         height: 100px;
                         padding: 20px 15px;
@@ -277,7 +283,7 @@ export default {
 
     .container {
         width: fit-content;
-        margin: 0px 31% 0 auto;
+        margin: 0px 33% 0 auto;
 
         .title {
             position: relative;
@@ -295,7 +301,7 @@ export default {
             }
 
             h1 {
-                font-size: 70px;
+                font-size: 72px;
                 font-weight: 300;
                 padding-bottom: 7px;
                 margin: 0 18px;
@@ -306,38 +312,44 @@ export default {
                 padding: 10px 0;
 
                 span {
-                    font-size: 22px;
-                    font-weight: 500;
+                    font-size: 21px;
+                    font-weight: 700;
                 }
 
                 div {
                     font-size: 18px;
                     margin-top: 20px;
+                    font-weight: 500;
                 }
             }
         }
     }
 }
-#card-list{
-    .ul-movie{
+
+#card-list {
+    .ul-movie {
         display: flex;
-        padding-bottom:65px ;
+        padding-bottom: 65px;
         gap: 30px;
         color: white;
-        .active{
+
+        .active {
             color: $brand_primary;
         }
-        a{
+
+        a {
             color: white;
         }
     }
-    .wrap-card-movie{
+
+    .wrap-card-movie {
         display: flex;
         flex-wrap: wrap;
         margin-left: -12px;
         margin-right: -12px;
         padding-bottom: 90px;
-        .card{
+
+        .card {
             width: calc((100% / 3) - 20px);
             margin: 10px;
         }
