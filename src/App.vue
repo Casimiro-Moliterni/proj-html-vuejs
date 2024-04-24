@@ -81,6 +81,41 @@ export default {
           bgColor:'color-pint'
         }
       ],
+      navList:[
+        {
+          name:'Home',
+          id:'01',
+          icon:'fa-solid fa-caret-down'
+        },
+        {
+          name:'Celebrity',
+          id:'02',
+          icon:'fa-solid fa-caret-down'
+        },
+        {
+          name:'Movie',
+          id:'03',
+          icon:'fa-solid fa-caret-down'
+        },
+        {
+          name:'Page',
+          id:'04',
+          icon:'fa-solid fa-caret-down'
+        },
+        {
+          name:'shop',
+          id:'05',
+          icon:'fa-solid fa-caret-down'
+        },
+        {
+          name:'blog',
+          id:'06',
+        },
+        {
+          name:'Contact Us',
+          id:'07'
+        },
+      ]
       }
   },
   mounted(){
@@ -90,7 +125,7 @@ export default {
 </script>
 
 <template>
-  <PageHeader></PageHeader>
+  <PageHeader :social="this.socialIcon" :NavLink="this.navList"></PageHeader>
   <PageMain></PageMain>
   <PageFooter :info="this.links" :social="this.socialIcon"></PageFooter>
 </template>

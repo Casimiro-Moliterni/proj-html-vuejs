@@ -1,71 +1,12 @@
 <script>
 export default {
   name: 'PageHeader',
+  props:{
+  social:Array,
+  NavLink:Array
+  },
   data() {
     return {
-      socialIcon: [
-        {
-          id: '01',
-          name: 'fa-facebook-f',
-          color: 'color-fb'
-        },
-        {
-          id: '02',
-          name: 'fa-twitter',
-          color: 'color-tw'
-        },
-        {
-          id: '03',
-          name: 'fa-linkedin-in',
-          color: 'color-in'
-        },
-        {
-          id: '04',
-          name: 'fa-instagram',
-          color: 'color-ig'
-        },
-        {
-          id: '05',
-          name: 'fa-google-plus-g',
-          color: 'color-gp'
-        },
-      ],
-      navList:[
-        {
-          name:'Home',
-          id:'01',
-          icon:'fa-solid fa-caret-down'
-        },
-        {
-          name:'Celebrity',
-          id:'02',
-          icon:'fa-solid fa-caret-down'
-        },
-        {
-          name:'Movie',
-          id:'03',
-          icon:'fa-solid fa-caret-down'
-        },
-        {
-          name:'Page',
-          id:'04',
-          icon:'fa-solid fa-caret-down'
-        },
-        {
-          name:'shop',
-          id:'05',
-          icon:'fa-solid fa-caret-down'
-        },
-        {
-          name:'blog',
-          id:'06',
-        },
-        {
-          name:'Contact Us',
-          id:'07'
-        },
-      ]
-
     }
   },
   methods: {
@@ -86,7 +27,7 @@ export default {
           <span>Superhit Top Movie</span>
           <span id="name">**King Star**</span>
           <ul>
-            <li v-for="singleIcon in socialIcon">
+            <li v-for="singleIcon in social" v-show="singleIcon.id !== '06'">
               <a href="#">
                 <i :class="[`fa-brands ${singleIcon.name} ${singleIcon.color}`]"></i>
               </a>
@@ -95,7 +36,7 @@ export default {
         </div>
         <div class="login">
           <i class="fa-solid fa-lock"></i>
-          login
+          Login
         </div>
       </div>
     </div>
@@ -116,7 +57,7 @@ export default {
       <div class="container">
         <nav>
           <ul>
-            <li v-for="singlElement in navList">
+            <li v-for="singlElement in NavLink">
               <a href="#">
                 {{ singlElement.name }}
               </a>
@@ -156,15 +97,16 @@ header {
     ul,
     .login {
       display: flex;
-      align-items: center;
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 500;
 
       .fa-envelope {
         margin-right: 4px;
       }
 
       ul {
-        gap: 10px;
+        margin-left: 10px;
+        gap: 15px;
       }
 
       #name {
@@ -263,7 +205,7 @@ padding: 14px 0px 26px 0;
         i{cursor: pointer;}
         a{
           color: white;
-          font-size: 24px;
+          font-size: 18px;
           margin-right: 4px;
           font-weight: 700;
         }
