@@ -19,9 +19,9 @@ export default {
         <div class="container">
             <div class="col left">
                 <div class="card left">
-                    <div class="overlay"></div>
                     <!-- img  -->
                     <div class="image">
+                        <div class="overlay"></div>
                         <img :src="getImageUrl(store.BlogList[0].imageXL)" alt="">
                         <!-- testo  -->
                         <!-- text wrap  -->
@@ -39,9 +39,9 @@ export default {
             </div>
             <div class="col">
                 <div class="card">
-                    <div class="overlay"></div>
                     <!-- img  -->
                     <div class="image">
+                        <div class="overlay"></div>
                         <img :src="getImageUrl(store.BlogList[1].imageMedium)" alt="">
                         <!-- testo  -->
                         <!-- text wrap  -->
@@ -53,9 +53,9 @@ export default {
                     </div>
                 </div>
                 <div class="card">
-                    <div class="overlay"></div>
                     <!-- img  -->
                     <div class="image">
+                        <div class="overlay"></div>
                         <img :src="getImageUrl(store.BlogList[2].imageMedium)" alt="">
                         <!-- testo  -->
                         <!-- text wrap  -->
@@ -67,10 +67,11 @@ export default {
                     </div>
                 </div>
                 <div class="card">
-                    <div class="overlay"></div>
+                    
                     <!-- img  -->
                     <div class="image">
                         <img :src="getImageUrl(store.BlogList[3].imageXL)" alt="">
+                        <div class="overlay"></div>
                         <!-- testo  -->
                         <!-- text wrap  -->
                         <div class="text-wrap">
@@ -81,9 +82,9 @@ export default {
                     </div>
                 </div>
                 <div class="card">
-                    <div class="overlay"></div>
                     <!-- img  -->
                     <div class="image">
+                        <div class="overlay"></div>
                         <img :src="getImageUrl(store.BlogList[4].imageXL)" alt="">
                         <!-- testo  -->
                         <!-- text wrap  -->
@@ -108,23 +109,32 @@ section {
 
     .container {
         display: flex;
+        justify-content: space-between;
  .col.left{
-    margin-left: -12px;
+    margin-left: -15px;
+    margin-right: -15px;
  }
 
         .col {
             width: 50%;
             display: flex;
             flex-wrap: wrap;
-
+             margin-left: -15px;
+            margin-right: -15px;
             .card {
 
                 position: relative;
                 border: none;
                 color: white;
-                width: calc((100% / 2) - 25px);
-                margin: 12px;
-                .overlay {
+                width: calc(100% / 2);
+                padding: 15px 15px;
+               
+                .image {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    border: none; 
+                    .overlay {
                     position: absolute;
                     width: 100%;
                     height: 100%;
@@ -135,12 +145,6 @@ section {
                    background-color: rgba(#0000, $alpha: 0.4);
                     z-index: 2;
                 }
-
-                .image {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
-                    border: none;
 
                     img {
                         width: 100%;
