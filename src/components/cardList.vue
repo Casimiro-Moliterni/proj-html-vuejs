@@ -330,9 +330,9 @@ export default {
     .ul-movie {
         display: flex;
         padding-bottom: 65px;
-        gap: 30px;
+        gap: 35px;
         color: white;
-
+        font-size: 20px;
         .active {
             color: $brand_primary;
         }
