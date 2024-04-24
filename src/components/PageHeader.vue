@@ -1,9 +1,9 @@
 <script>
 export default {
   name: 'PageHeader',
-  props:{
-  social:Array,
-  NavLink:Array
+  props: {
+    social: Array,
+    NavLink: Array
   },
   data() {
     return {
@@ -56,13 +56,24 @@ export default {
     <div class="header-bottom">
       <div class="container">
         <nav>
-          <ul>
+          <ul id="ul-list">
             <li v-for="singlElement in NavLink">
               <a href="#">
                 {{ singlElement.name }}
               </a>
               <i :class="[` ${singlElement.icon}`]"></i>
             </li>
+            <template v-if="singlElement !== 'Home'">
+              <ul id="list-hover">
+                <li v-for="n in 6"  >
+                  <div >
+                    <a href="#">
+                    home {{ n }}
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </template>
           </ul>
           <div class="basket-buy">
             <div>0</div>
@@ -145,7 +156,8 @@ header {
 
 .header-center {
   padding: 12px 0 32px 0;
-border-bottom:1px solid #182028;
+  border-bottom: 1px solid #182028;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -189,45 +201,79 @@ border-bottom:1px solid #182028;
 }
 
 .header-bottom {
-padding: 14px 0px 26px 0;
+  padding: 14px 0px 26px 0;
+
   .container {
     display: flex;
     align-items: center;
-    
-     nav{
+
+    nav {
       display: flex;
       align-items: center;
       width: 100%;
-      ul{
+
+      #ul-list {
         display: flex;
-        flex-grow:1 ;
+        flex-grow: 1;
         gap: 25px;
-        i{cursor: pointer;}
-        a{
+        i {
+          cursor: pointer;
+        }
+
+        a {
           color: white;
           font-size: 18px;
           margin-right: 4px;
           font-weight: 700;
         }
       }
-       .basket-buy{
-         display: flex;
-         flex-direction: column;
-         justify-content: end;
-          div{
-            margin-left: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-            background-color: $brand_primary;
-            padding: 6px;
-            height: 20px;
-            border-radius: 100%;
-          }
-       }
-      
-     }
+
+      #ul-list>li:hover a,
+      #ul-list>li:hover {
+        color: $brand_primary;
+      }
+      #ul-list{
+      position: relative;
+    }
+    #ul-list:nth-child(1):hover  #list-hover{
+      display: block;
+    }
+    #list-hover{
+      width: 190px;
+       z-index: 111;
+      position: absolute;
+      top: 20px;
+      left: -15px;
+      padding: 15px;
+      background-color: $brand_secondary;
+      border-radius: 10px;
+      display: none;
+      li{
+        padding-bottom: 15px;
+      }
+    }
+    #list-hover>li:hover a{
+      color: $brand_primary;
+    }
+      .basket-buy {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        div {
+          margin-left: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          background-color: $brand_primary;
+          padding: 6px;
+          height: 20px;
+          border-radius: 100%;
+        }
+      }
+
+    }
   }
 }
 </style>

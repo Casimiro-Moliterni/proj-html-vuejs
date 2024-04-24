@@ -105,7 +105,7 @@ export default {
             </div>
             <!-- ul ///////////////  -->
             <ul class="ul-movie">
-                <li><a href="#" class="active"> All</a></li>
+                <li class="active"><a href="#"> All</a></li>
                 <li><a href="#"> Coming Soon</a></li>
                 <li><a href="#">Latest Movie</a></li>
                 <li><a href="#">Top Rating</a></li>
@@ -334,13 +334,16 @@ export default {
         color: white;
         font-size: 20px;
         .active {
-            color: $brand_primary;
+           a{ color: $brand_primary;}
         }
-
         a {
             color: white;
         }
     }
+    .ul-movie > li:hover a{
+    color: $brand_primary;
+ }
+ 
 
     .wrap-card-movie {
         display: flex;
