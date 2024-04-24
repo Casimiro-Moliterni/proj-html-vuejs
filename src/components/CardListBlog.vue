@@ -132,7 +132,7 @@ section {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background-color: rgba(0, 0, 0, 0.5);
+                   background-color: rgba(#0000, $alpha: 0.4);
                     z-index: 2;
                 }
 
@@ -141,13 +141,11 @@ section {
                     height: 100%;
                     width: 100%;
                     border: none;
-                    z-index: 22;
 
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        opacity: 0.3;
                     }
 
                     .text-wrap {

@@ -19,9 +19,9 @@ export default {
 
 <template>
     <div class="single-card">
+        <div class="overlay"></div>
         <!-- img  -->
         <div class="image">
-            <div class="overlay"></div>
             <img :src="getImageUrl(store.MovieList[0].imageXL)" alt="">
             <!-- testo  -->
             <div class="wrap-star">
@@ -40,9 +40,9 @@ export default {
     </div>
     <!-- //////////////////// -->
     <div class="single-card active">
+        <div class="overlay active"></div>
         <!-- img  -->
         <div class="image ">
-        <div class="overlay active"></div>
             <img :src="getImageUrl(store.MovieList[1].imageXL)" alt="">
             <!-- testo  -->
             <div class="wrap-star ">
@@ -62,9 +62,9 @@ export default {
     <!-- //////////////////// -->
 
     <div class="single-card">
+        <div class="overlay"></div>
         <!-- img  -->
         <div class="image">
-            <div class="overlay"></div>
             <img :src="getImageUrl(store.MovieList[2].imageXL)" alt="">
             <!-- testo  -->
 
@@ -101,13 +101,7 @@ export default {
             opacity: 0.5;
         }
     }
-
-    .image {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        border: none;
-        .overlay {
+    .overlay {
         border-radius: 20px;
         position: absolute;
         width: 100%;
@@ -116,10 +110,17 @@ export default {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0,0,0,0.4);
-        z-index: 2;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        z-index: 22;
         &.active{z-index: 0;}
     }
+
+    .image {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: none;
+       
         img {
             width: 100%;
             height: 100%;

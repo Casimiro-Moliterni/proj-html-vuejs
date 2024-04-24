@@ -22,7 +22,7 @@ export default {
         {
           id: '04',
           name: 'fa-instagram',
-          color: 'color-fb'
+          color: 'color-ig'
         },
         {
           id: '05',

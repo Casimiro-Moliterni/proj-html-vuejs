@@ -173,20 +173,18 @@ export default{
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
+        background: rgba($color: #000000, $alpha: 0.4);
+        z-index: 44;
     }
         .image {
         position: relative;
         height: 100%;
         width: 100%;
         border: none;
-       z-index: 22;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.3;
         }
 
         .wrap-star {

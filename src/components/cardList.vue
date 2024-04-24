@@ -271,7 +271,7 @@ export default {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(9, 8, 32, 0.3);
+        background-color: rgba($color: $brand_tertiary, $alpha: 0.4);
         z-index: 2;
     }
 
