@@ -24,7 +24,7 @@ export default{
       <div class="image">
             <img :src="getImageUrl(store.MovieList[0].imageXL)" alt="">
             <!-- testo  -->
-
+ 
             <div class="wrap-star">
                 <i class="fa-solid fa-star"></i>
                 <div>0/0</div>
@@ -35,6 +35,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[0].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[0].views }}</div>
@@ -58,6 +59,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[5].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[5].views }}</div>
@@ -82,6 +84,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[3].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[3].views }}</div>
@@ -106,6 +109,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[6].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[6].views }}</div>
@@ -130,6 +134,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[7].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[7].views }}</div>
@@ -154,6 +159,7 @@ export default{
                 <span><strong>Category:</strong></span>
                 <span>{{ store.MovieList[1].category }}</span>
             </div>
+            <div class="play-icon"><img :src="getImageUrl('circle-play-1.svg')" alt=""></div>
             <div class="top-hover">2.30.00</div>
             <div class="details left">details</div>
             <div class="details right">view {{ store.MovieList[1].views }}</div>
@@ -192,7 +198,24 @@ export default{
             height: 100%;
             object-fit: cover;
         }
-
+   
+        .play-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 111;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, - 50%);
+            position: absolute;
+            filter:invert(1);
+            transition: 0.9s;
+           img{
+            height: 70px;
+            transition: 0.9s;
+           }
+        }
         .wrap-star {
             z-index: 111;
             display: flex;
@@ -281,5 +304,11 @@ export default{
     
 .card-movie:hover .top-hover{
     display: block;
+    transition: 0.9s;
+}
+.card-movie:hover .play-icon{
+    display: block;
+    transition: 0.9s;
+    cursor: pointer;
 }
 </style>

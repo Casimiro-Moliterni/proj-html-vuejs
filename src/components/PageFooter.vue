@@ -199,6 +199,7 @@ export default {
  .color-fb{
     background-color: #02b0e8;
  }
+ 
  .color-in{
     background-color:#00a098 ;
  }
@@ -208,4 +209,11 @@ export default {
  .color-pint{
     background-color: #b00a1b;
  }
+ #social> :nth-child(1):hover div{
+background-color: inherit;
+ }
+ #social> :nth-child(1):hover i{
+    color: $brand_primary;
+ }
+
 </style>
