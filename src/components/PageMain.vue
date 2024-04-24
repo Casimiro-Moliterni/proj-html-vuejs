@@ -37,6 +37,7 @@ export default {
     color: white;
     background-color: $brand_secondary;
     padding-top: 110px;
+    padding-bottom: 85px;
     .container{
         background-image: url(../assets/img/form-bg-1.png);
         min-height: 350px;

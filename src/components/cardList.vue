@@ -336,6 +336,7 @@ export default {
         flex-wrap: wrap;
         margin-left: -12px;
         margin-right: -12px;
+        padding-bottom: 90px;
         .card{
             width: calc((100% / 3) - 20px);
             margin: 10px;
