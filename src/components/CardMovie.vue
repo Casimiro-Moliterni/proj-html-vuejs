@@ -188,19 +188,20 @@ export default{
         }
 
         .wrap-star {
+            z-index: 111;
             display: flex;
             align-items: center;
             padding: 30px 10px;
             position: absolute;
             top: 0;
             right: 0;
-            
             i {
                 color: $brand_primary;
             }
         }
 
         .text-wrap {
+            z-index: 111;
             padding: 0 10px;
             position: absolute;
             bottom: 17%;
@@ -229,12 +230,14 @@ export default{
             z-index: 33;
             font-weight: 700;
             &.left {
+                z-index: 111;
                 left: 0;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
             }
 
             &.right {
+                z-index: 111;
                 right: 0;
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
