@@ -69,7 +69,7 @@ export default {
                             </div>
                             <div class="text">
                                 <h3>{{ card.name }}</h3>
-                                <div class="views"><strong>Views:{{ card.views }}</strong></div>
+                                <div class="views"><strong>{{ card.views }} Views </strong></div>
                                 <div class="clock">
                                     February 12,2016
                                     <div>2.30.00</div>

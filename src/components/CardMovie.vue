@@ -53,12 +53,12 @@ export default{
             </div>
             <!-- text wrap  -->
             <div class="text-wrap">
-                <h3>{{ store.MovieList[1].name}}</h3>
+                <h3>{{ store.MovieList[5].name}}</h3>
                 <span><strong>Category:</strong></span>
-                <span>{{ store.MovieList[1].category }}</span>
+                <span>{{ store.MovieList[5].category }}</span>
             </div>
             <div class="details left">details</div>
-            <div class="details right">view {{ store.MovieList[1].views }}</div>
+            <div class="details right">view {{ store.MovieList[5].views }}</div>
         </div>
  </div>
  <!-- ////////////////////////////////////// -->
@@ -202,7 +202,7 @@ export default{
 
         .text-wrap {
             z-index: 111;
-            padding: 0 10px;
+            padding: 0 20px;
             position: absolute;
             bottom: 17%;
             left: 0;

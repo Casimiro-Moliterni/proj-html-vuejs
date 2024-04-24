@@ -26,9 +26,9 @@ export const store = reactive({
             imageSmall:'5-150x150.jpg',
             imageMedium:'5-300x300.jpg',
             imageXL:'5.jpg',
-            name:'New Movie Quisque in Strack',
+            name:'Movie Action Gorila English',
             category:'Latest Movie',
-            views:'721'
+            views:'362'
         },
         {
             id:'04',
