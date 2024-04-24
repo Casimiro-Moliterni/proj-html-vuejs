@@ -232,7 +232,7 @@ section {
                     bottom: 0;
                     // background: -webkit-radial-gradient(top center, ellipse cover, rgba(21, 219, 77, 0.6) 10%,rgba(0,0,0,0.5) 100%);
                     background: rgb(11,163,31);
-background: linear-gradient(180deg, rgba(11,163,31,0.6) 11%, rgba(0,0,0,0.8) 96%, rgba(2,0,36,0.8) 100%);
+                   background: linear-gradient(180deg, rgba(11,163,31,0.6) 11%, rgba(0,0,0,0.8) 96%, rgba(2,0,36,0.8) 100%);
                     z-index: 2;
             }
 
